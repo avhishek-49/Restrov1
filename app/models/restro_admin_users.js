@@ -5,9 +5,11 @@ const restroAdminUserSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   restaurant: { type: mongoose.Schema.Types.ObjectId, ref: 'Restaurant' },  // Reference to the Restaurant model
+  owners: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Owner' }], // Optional: Reference to Owner model
 }, {
   timestamps: true,  // Automatically add createdAt and updatedAt fields
 });
+
 
 const RestroAdminUser = mongoose.model('RestroAdminUser', restroAdminUserSchema);
 
