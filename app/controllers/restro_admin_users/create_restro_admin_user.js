@@ -8,10 +8,10 @@ export const createRestroAdminUser = async (req, res) => {
    await newUser.save();
 
    const owner = new Owner({
-    name: 'Jane Doe',
+    name: 'lalit sunar',
     mobilePhone: '123-456-7890',
     panNumber: 'ABCDE1234F',
-    email: 'jane@example.com',
+    email: 'lalit@example.com',
     adminUser: newUser._id,  // Link to the admin user
   });
     const ownerInfo = new Owner(owner);
